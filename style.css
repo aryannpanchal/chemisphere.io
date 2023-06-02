@@ -1,0 +1,531 @@
+/*-----------------------CUSTOM PROPERTIES-------------------------------------------------------------*/
+
+:root{
+    --clr-mainheadline: rgb(207, 10, 10);
+    --clr-subheadline: rgb(52, 20, 20);
+    --clr-paragraph: rgb(0, 0, 0);
+    --clr-list-paragraph: black;
+    --clr-button: black;
+    --clr-button-text: #fff;
+
+
+    --fs-mainheadline:3.7rem;
+    --fs-subheadline: 2.5rem;
+
+    --fw-mainheadline: 600;
+    --fw-subheadline: 500;
+    --fw-list: 400;
+    --fw-button: 600;
+    --fw-paragraph: 300;
+    
+   
+
+}
+
+
+/*-----------------------CSS RESET-------------------------------------------------------------*/
+    *,
+    *::before,
+    *::after {
+      box-sizing: border-box;
+    }
+    
+    /* Remove default margin */
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: 'Montserrat', sans-serif;
+     
+     
+      
+    }
+    
+    /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+    ul[role='list'],
+    ol[role='list'] {
+      list-style: none;
+    }
+    
+    /* Set core root defaults */
+    html:focus-within {
+      scroll-behavior: smooth;
+    }
+    
+    html, body{
+      height: 100%;
+      background-color: #fff;
+      scroll-behavior: smooth;
+      overflow-x: hidden;
+        
+       
+    }
+
+    
+
+
+    /* Set core body defaults */
+    body {
+      
+      text-rendering: optimizeSpeed;
+      line-height: 1.25;
+      padding: 15px;
+      overflow-x: hidden;
+      background-image: url(img/Home.svg);
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      
+      
+      
+    }
+    
+    /* A elements that don't have a class get default styles */
+    a:not([class]) {
+      text-decoration-skip-ink: auto;
+    }
+    
+    /* Make images easier to work with */
+    img,
+    picture,
+    svg {
+      max-width: 100%;
+      display: block;
+    }
+
+    
+  
+    
+   
+        
+
+    /*-----------------------CSS RESET*-------------------------------------------------------------/
+
+    /*-----------------------GENERAL STYLING-------------------------------------------------------------*/
+
+    
+/*--for even padding horizontally evenly-----------------------*/
+    .container{
+    --max-width: 1110px;  /*cutom property for improved readability*/
+    --padding: 1rem;      /*cutom property for improved readability*/
+
+    width: min(var(--max-width), 100% - (var(--padding)*2));
+    margin-inline: auto;
+    }
+
+/*ADDING CUSTOM PROPERTIES*/
+    .mainheadline{
+    font-weight: var(--fw-mainheadline);
+    font-size: var(--fs-mainheadline);
+    color: var(--clr-mainheadline); 
+    }
+
+    .subheadline{
+    font-weight: var(--fw-subheadline);
+    font-size: var(--fs-subheadline);
+    color: var(--clr-subheadline);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    }
+
+    .padding-block{    
+    padding-bottom: 3rem;   
+    }
+
+    .chandan-biswas{
+    display: flex;
+    justify-content: left;
+    }
+
+    button{
+    border: 0;
+    border-radius: 100vmax;
+    padding: 1em 2em;
+    font-weight: var(--fw-button);
+    background-color: var(--clr-button);
+    color: var(--clr-button-text);
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 3px 6px, rgba(0, 0, 0, 0.23) 0px 3px 6px;   }
+
+    button:hover,
+    button:active{
+    background-color: rgb(255, 0, 0);
+    transition:  0.3s ease-in-out;
+    color: rgb(255, 255, 255);
+    box-shadow: rgba(0, 0, 0, 0.12) 0px 1px 3px, rgba(0, 0, 0, 0.24) 0px 1px 2px;
+   }
+
+   .even-columns{
+        display: grid;
+        gap: 0.5em;
+    }
+
+   .marquee-nav{
+       background-color: #ff0000;
+       color: rgb(255, 255, 255);
+       font-weight: 900;
+       border-radius: 10px;
+    
+    }
+
+    .OurExpertise{
+      font-size: 2rem;
+    }
+
+    .subjects{  
+      padding: 20px 20px;  
+    }
+    
+    .ListOfSubjects{
+      line-height: 30px;
+    }
+          
+    .pp-textarea{
+      text-align: center;
+    }
+    
+    .img-pp{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    
+    .imgg{
+      width: 200px;
+    }
+    
+    .vmbtn{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .view-more{
+      color: white;
+      text-decoration: none;
+    }
+
+    
+  @media (min-width: 1034px){                    /*use em for media queries*/
+        .even-columns{
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+          }
+
+        .Testimonial
+          {
+            font-weight: var(--fw-subheadline);
+          }
+
+        .yt
+          {
+            display: grid;
+            grid-auto-columns: 1fr;
+          }
+    
+        .appimg
+          {
+            grid-auto-flow: column;
+            grid-auto-columns: 1fr;
+          }
+        .container-pluspoints
+          {
+            display: grid;
+            grid-auto-flow: column;
+          }
+
+        .playstore-btn
+          {
+            display: grid
+          }
+
+       
+/*----------------------- FOOTER-------------------------------------------------------------*/
+
+.footer{
+  color: grey;
+  margin: 0;
+  padding: 0;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;  
+}
+
+.footer-nav{
+  display: flex;
+  align-items: center;
+}
+
+.footer-nav-ul{
+  display: flex;
+  gap: 60px;
+  align-items: center;
+}
+
+.footer-links{
+  text-decoration: none;
+  list-style-type: none;
+  text-align: center;  
+}
+.footer-links a{
+  text-decoration: none;
+  color: grey;  
+}
+
+.footer-icons{
+  width: 45px;
+  height: 50px;
+}
+.footer-nav-ul-icons{
+  display: flex;
+  gap: 60px;
+  text-decoration: none;
+  list-style-type: none;
+  justify-content: center;
+}
+
+
+
+.footer-nav{
+  justify-content: space-evenly;
+}
+
+.footer-logo{
+  width: 450px;
+  padding: 20px;
+}
+
+.rights{
+  display: flex;
+  justify-content: center;
+}
+}
+
+
+@media(max-width: 1034px){
+  .wrapper-yt{
+    display: grid;
+    justify-content: center;
+  }
+
+  /*footer*/
+  .footer{
+    color: grey;
+    margin: 0;
+    padding: 0;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  }
+  
+  .footer-nav{
+    display: flex;
+    align-items: center;
+    padding-bottom: 40px;
+  }
+  
+  .footer-nav-ul{
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+  
+  .footer-links{
+    text-decoration: none;
+    list-style-type: none;
+    text-align: center;
+  }
+  
+  .footer-links a{
+    text-decoration: none;
+    color: grey;
+  }
+  
+  .footer-icons{
+    width: 25px;
+    height: 50px;
+  }
+  
+  .footer-nav-ul-icons{ 
+    display: flex;
+    gap: 40px;
+    text-decoration: none;
+    list-style-type: none;
+    justify-content: center;
+  }
+  
+  .footer-nav{
+    justify-content: space-evenly;
+  }
+  
+  .footer-logo{
+    width: 300px;
+    padding: 20px;
+  }
+  
+  .rights{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+  }
+  }
+
+    
+
+    
+ /*--Navbar mobile styling-----------------------*/
+
+ .container-nav{
+  
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow-x: hidden;
+  
+ }
+
+ .nav-list{
+  display: flex;
+  gap: 60px;
+  }
+
+ .nav-links{
+  text-decoration: none;
+  color: black;
+ }
+
+  .nav-links:hover,
+  nav.nav-links:active{
+    
+    color: blue;
+    transition: all 0s ease-in-out; 
+    font-weight: 500;   
+  }
+
+
+
+  .mobile-navbar-btn{
+      display: none;
+  }
+
+  .mobile-nav-icon[name="close-outline"]{
+      display: none;
+  }
+ 
+ 
+
+  @media(max-width: 700px){
+
+      .OurExpertise{
+      text-align: center;
+      }
+
+      .chandan-biswas{
+      display: flex;
+      justify-content: center;
+      }
+
+      .app{
+      text-align: center;
+      }
+
+      .playstore-btn{
+      display: flex;
+      justify-content: center;
+      padding: 10px 30px;
+      }
+
+      .wrapper-yt { 
+      display: grid;
+      grid-auto-columns: 1fr ;
+      position: relative; 
+      padding-bottom: 56.25%; 
+      padding-top: 30px; 
+      height: 0; 
+      overflow: hidden; 
+      }
+
+      .wrapper-yt iframe, .wrapper-yt object, .wrapper-yt embed 
+      { 
+      position: absolute; 
+      top: 0; 
+      left: 0; 
+      width: 100%; 
+      height: 100%; 
+      }
+    
+      .phone_img{
+      display: flex;
+      justify-content:center;
+      }
+      .mobile-navbar-btn{
+        display: block;
+        z-index: 999;
+      }
+      .navbar{
+        display: none;
+        width: 100%;
+        height: 100vh;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgb(255, 255, 255);
+        opacity: 0;
+        visibility: hidden;
+        pointer-events: none;
+      }
+
+      .nav-list{
+        flex-direction: column;
+        align-items: center;
+      }
+     
+      .nav-links{
+        color: #000000;
+      }
+      
+      .mobile-nav-icon{
+        width: 40px;
+        height: 40px;
+      }
+
+      .active .navbar{
+        transform: translateX(0);
+        opacity: 1;
+        visibility: visible;
+        pointer-events: auto; 
+      }
+
+      .active .mobile-navbar-btn .mobile-nav-icon[name="close-outline"]{
+        display: block;
+      }
+
+      .active .mobile-nav-icon[name="menu-outline"]{
+        display: none;
+      }
+      
+      .fos{
+        text-align: center;
+      }    
+      
+      .titlediv{
+        font-size: 3rem;
+      }
+  
+      .subtitlediv{
+        font-size: 1.5rem;
+      }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
